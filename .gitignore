@@ -1,0 +1,5 @@
+# IGNORAR TARGET DO BACKEND
+backend/target/
+
+# IGNORAR .class
+*.class

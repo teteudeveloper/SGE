@@ -19,7 +19,6 @@ public class DataInitializer implements CommandLineRunner {
     
     @Override
     public void run(String... args) throws Exception {
-        // Criar perfis se não existirem
         if (perfilRepository.count() == 0) {
             Perfil admin = new Perfil();
             admin.setNome("ADMIN");
@@ -37,7 +36,6 @@ public class DataInitializer implements CommandLineRunner {
             perfilRepository.save(estoque);
         }
         
-        // Criar usuário admin se não existir
         if (!usuarioRepository.existsByEmail("admin@empresa.com")) {
             Perfil perfilAdmin = perfilRepository.findByNome("ADMIN")
                 .orElseThrow(() -> new RuntimeException("Perfil ADMIN não encontrado"));

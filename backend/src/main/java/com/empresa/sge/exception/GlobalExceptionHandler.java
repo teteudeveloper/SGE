@@ -77,7 +77,6 @@ class ErrorResponse {
         this.timestamp = timestamp;
     }
     
-    // Getters and Setters
     public int getStatus() { return status; }
     public void setStatus(int status) { this.status = status; }
     public String getMessage() { return message; }

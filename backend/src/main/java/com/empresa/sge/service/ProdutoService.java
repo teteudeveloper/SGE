@@ -65,13 +65,11 @@ public class ProdutoService {
         produto.setEstoqueMinimo(dto.getEstoqueMinimo() != null ? dto.getEstoqueMinimo() : 10);
         produto.setAtivo(true);
         
-        // Buscar ou criar categoria por ID ou por Nome
         if (dto.getCategoriaId() != null) {
             Categoria categoria = categoriaRepository.findById(dto.getCategoriaId())
                     .orElseThrow(() -> new ResourceNotFoundException("Categoria não encontrada"));
             produto.setCategoria(categoria);
         } else if (dto.getCategoriaNome() != null && !dto.getCategoriaNome().trim().isEmpty()) {
-            // Buscar categoria por nome, ou criar se não existir
             Categoria categoria = categoriaRepository.findByNome(dto.getCategoriaNome())
                     .orElseGet(() -> {
                         Categoria novaCategoria = new Categoria();
@@ -103,13 +101,11 @@ public class ProdutoService {
         produto.setQuantidadeEstoque(dto.getQuantidadeEstoque());
         produto.setEstoqueMinimo(dto.getEstoqueMinimo());
         
-        // Buscar ou criar categoria por ID ou por Nome
         if (dto.getCategoriaId() != null) {
             Categoria categoria = categoriaRepository.findById(dto.getCategoriaId())
                     .orElseThrow(() -> new ResourceNotFoundException("Categoria não encontrada"));
             produto.setCategoria(categoria);
         } else if (dto.getCategoriaNome() != null && !dto.getCategoriaNome().trim().isEmpty()) {
-            // Buscar categoria por nome, ou criar se não existir
             Categoria categoria = categoriaRepository.findByNome(dto.getCategoriaNome())
                     .orElseGet(() -> {
                         Categoria novaCategoria = new Categoria();

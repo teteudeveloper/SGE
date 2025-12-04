@@ -29,19 +29,16 @@ public class DashboardService {
         LocalDateTime inicioMes = LocalDateTime.now().withDayOfMonth(1).with(LocalTime.MIN);
         LocalDateTime fimMes = LocalDateTime.now().with(LocalTime.MAX);
         
-        // Vendas de hoje
         BigDecimal totalHoje = vendaRepository.somarVendasPorPeriodo(inicioDia, fimDia);
         Long quantidadeHoje = vendaRepository.contarVendasPorPeriodo(inicioDia, fimDia);
         dashboard.setTotalVendasHoje(totalHoje != null ? totalHoje : BigDecimal.ZERO);
         dashboard.setQuantidadeVendasHoje(quantidadeHoje != null ? quantidadeHoje : 0L);
         
-        // Vendas do mês
         BigDecimal totalMes = vendaRepository.somarVendasPorPeriodo(inicioMes, fimMes);
         Long quantidadeMes = vendaRepository.contarVendasPorPeriodo(inicioMes, fimMes);
         dashboard.setTotalVendasMes(totalMes != null ? totalMes : BigDecimal.ZERO);
         dashboard.setQuantidadeVendasMes(quantidadeMes != null ? quantidadeMes : 0L);
         
-        // Financeiro do mês
         LocalDate inicioMesDate = LocalDate.now().withDayOfMonth(1);
         LocalDate fimMesDate = LocalDate.now();
         
@@ -52,10 +49,8 @@ public class DashboardService {
         dashboard.setDespesasMes(despesas != null ? despesas : BigDecimal.ZERO);
         dashboard.setSaldoMes(dashboard.getReceitasMes().subtract(dashboard.getDespesasMes()));
         
-        // Produtos com estoque baixo
         dashboard.setProdutosEstoqueBaixo(produtoRepository.findProdutosEstoqueBaixo().size());
         
-        // Produtos mais vendidos (últimos 30 dias)
         LocalDateTime inicio30Dias = LocalDateTime.now().minusDays(30);
         List<Object[]> produtosMaisVendidos = itemVendaRepository.findProdutosMaisVendidos(inicio30Dias, fimMes);
         List<Map<String, Object>> produtos = new ArrayList<>();
@@ -64,7 +59,7 @@ public class DashboardService {
             produto.put("nome", row[0]);
             produto.put("quantidade", row[1]);
             produtos.add(produto);
-            if (produtos.size() >= 5) break; // Top 5
+            if (produtos.size() >= 5) break; 
         }
         dashboard.setProdutosMaisVendidos(produtos);
         

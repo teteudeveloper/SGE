@@ -5,29 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d22cdc25-ca4d-4dd0-95c1-e5865006b777" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/empresa/sge/controller/ProdutoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/empresa/sge/controller/ProdutoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/empresa/sge/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/empresa/sge/controller/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/empresa/sge/controller/VendaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/empresa/sge/controller/VendaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/empresa/sge/repository/CategoriaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/empresa/sge/repository/CategoriaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/empresa/sge/service/ProdutoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/empresa/sge/service/ProdutoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/empresa/sge/controller/ProdutoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/empresa/sge/controller/ProdutoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/empresa/sge/controller/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/empresa/sge/controller/UsuarioController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/empresa/sge/controller/VendaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/empresa/sge/controller/VendaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/empresa/sge/repository/CategoriaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/empresa/sge/repository/CategoriaRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/empresa/sge/service/ProdutoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/empresa/sge/service/ProdutoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Common/DataTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Common/DataTable.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Layout/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Layout/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Dashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Estoque/Estoque.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Estoque/Estoque.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Financeiro/Financeiro.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Financeiro/Financeiro.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Produtos/ProdutosList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Produtos/ProdutosList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Usuarios/UsuariosList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Usuarios/UsuariosList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Vendas/VendasList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Vendas/VendasList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/utils/validators.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/utils/validators.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/empresa/sge/config/DataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/empresa/sge/config/DataInitializer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +37,8 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/teteu/Downloads/trabalho/sge&quot;
+    &quot;last_opened_file_path&quot;: &quot;/home/teteu/Downloads/trabalho/sge&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
   <component name="TaskManager">

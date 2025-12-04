@@ -42,11 +42,9 @@ public class VendaService {
     
     @Transactional
     public VendaDTO criar(VendaDTO dto) {
-        // Validar usuário
         Usuario usuario = usuarioRepository.findById(dto.getUsuarioId())
                 .orElseThrow(() -> new ResourceNotFoundException("Usuário não encontrado"));
         
-        // Criar venda
         Venda venda = new Venda();
         venda.setNumeroVenda(gerarNumeroVenda());
         venda.setUsuario(usuario);
@@ -58,17 +56,14 @@ public class VendaService {
         BigDecimal subtotal = BigDecimal.ZERO;
         BigDecimal descontoTotal = dto.getDesconto() != null ? dto.getDesconto() : BigDecimal.ZERO;
         
-        // Processar itens
         for (ItemVendaDTO itemDTO : dto.getItens()) {
             Produto produto = produtoRepository.findById(itemDTO.getProdutoId())
                     .orElseThrow(() -> new ResourceNotFoundException("Produto não encontrado: " + itemDTO.getProdutoId()));
             
-            // Verificar estoque
             if (produto.getQuantidadeEstoque() < itemDTO.getQuantidade()) {
                 throw new BusinessException("Estoque insuficiente para o produto: " + produto.getNome());
             }
             
-            // Criar item da venda
             ItemVenda item = new ItemVenda();
             item.setVenda(venda);
             item.setProduto(produto);
@@ -86,11 +81,9 @@ public class VendaService {
             venda.getItens().add(item);
             subtotal = subtotal.add(subtotalItem);
             
-            // Atualizar estoque
             produto.setQuantidadeEstoque(produto.getQuantidadeEstoque() - itemDTO.getQuantidade());
             produtoRepository.save(produto);
             
-            // Registrar movimentação de estoque
             MovimentacaoEstoque movimentacao = new MovimentacaoEstoque();
             movimentacao.setProduto(produto);
             movimentacao.setTipo("SAIDA");
@@ -109,7 +102,6 @@ public class VendaService {
         
         venda = vendaRepository.save(venda);
         
-        // Criar lançamento financeiro (receita)
         LancamentoFinanceiro lancamento = new LancamentoFinanceiro();
         lancamento.setTipo("RECEITA");
         lancamento.setCategoria("Venda");
